@@ -6,13 +6,13 @@
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/index.js" defer></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-  <script src="scripts/map.js"></script>
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple.png" sizes="180x180">
   <link rel="manifest" href="manifest.webmanifest">
+  <script src="scripts/index.js" defer></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=f11153c7-9817-48aa-9e06-28113b79b36b&lang=ru_RU" defer></script>
+  <script src="scripts/map.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -54,7 +54,7 @@
         <picture>
           <source width="709" height="609" type="image/png" media="(min-width: 709px)" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x">
           <source width="552" height="499" type="image/png" media="(min-width: 552px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
-          <img class="advertising__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" alt="Упаковка питания Cat Energy">
+          <img class="advertising__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Упаковка питания Cat Energy">
         </picture>
         <a class="advertising__link button" href="form.html">Подобрать программу</a>
       </div>
@@ -124,7 +124,9 @@
         </div>
 
         <div class="slider__tools">
-          <button class="slider__toggle" type="button"></button>
+          <button class="slider__toggle" type="button">
+            <span class="visually-hidden">Переключатель</span>
+          </button>
         </div>
 
       </div>

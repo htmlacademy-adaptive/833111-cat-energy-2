@@ -1,3 +1,4 @@
+/* global ymaps */
 ymaps.ready(init);
 
 function init() {
