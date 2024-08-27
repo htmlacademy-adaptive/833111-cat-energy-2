@@ -6,13 +6,13 @@
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/index.js" defer></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-  <script src="scripts/map.js"></script>
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple.png" sizes="180x180">
   <link rel="manifest" href="manifest.webmanifest">
+  <script src="scripts/index.js" defer></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=f11153c7-9817-48aa-9e06-28113b79b36b&lang=ru_RU" defer></script>
+  <script src="scripts/map.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -21,12 +21,12 @@
     <div class="main-header__container container">
       <a class="main-header__logo-link" href="index.html">
         <picture>
-          <source width="70" height="59" type="image/png" media="(min-width: 70px)" srcset="images/logo-desktop@1x.png 1x, images/logo-desktop@2x.png 2x">
-          <source width="60" height="50" type="image/png" media="(min-width: 60px)" srcset="images/logo-tablet@1x.png 1x, images/logo-tablet@2x.png 2x">
+          <source width="70" height="59" type="image/png" media="(min-width: 1440px)" srcset="images/logo-desktop@1x.png 1x, images/logo-desktop@2x.png 2x">
+          <source width="60" height="50" type="image/png" media="(min-width: 768px)" srcset="images/logo-tablet@1x.png 1x, images/logo-tablet@2x.png 2x">
           <img class="main-header__logo" src="images/logo-mobile@1x.png" srcset="images/logo-mobile@2x.png 2x" width="33" height="38" alt="Логотип компании">
         </picture>
         <picture>
-          <source width="118" height="18" type="image/svg+xml" media="(min-width: 118px)" srcset="images/logo-name-desktop.svg">
+          <source width="118" height="18" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-name-desktop.svg">
           <img class="main-header__logo-name logo-name" src="images/logo-name.svg" width="101" height="18" alt="Cat Energy">
         </picture>
       </a>
@@ -36,13 +36,13 @@
 
         <ul class="main-header__nav-list site-list">
           <li class="site-list__item site-list__item--current">
-            <a class="main-header__nav-link main-header__nav-link--current" href="index.html" aria-current="page">Главная</a>
+            <a class="main-header__nav-link" href="index.html" aria-current="page">Главная</a>
           </li>
           <li class="site-list__item">
             <a class="main-header__nav-link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a class="main-header__nav-link" href="form.html">Подбор программы</a>
+            <a class="main-header__nav-link" href="#">Подбор программы</a>
           </li>
         </ul>
 
@@ -52,9 +52,9 @@
         <h1 class="advertising__title">Функциональное питание для котов</h1>
         <p class="advertising__description">Занялся собой? Займись котом!</p>
         <picture>
-          <source width="709" height="609" type="image/png" media="(min-width: 709px)" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x">
-          <source width="552" height="499" type="image/png" media="(min-width: 552px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
-          <img class="advertising__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" alt="Упаковка питания Cat Energy">
+          <source width="709" height="609" type="image/png" media="(min-width: 1440px)" srcset="images/index-can-tablet@1x.png 1x, images/index-can-tablet@2x.png 2x">
+          <source width="552" height="499" type="image/png" media="(min-width: 768px)" srcset="images/index-can-desktop@1x.png 1x, images/index-can-desktop@2x.png 2x">
+          <img class="advertising__image" src="images/index-can-mobile@1x.png" srcset="images/index-can-mobile@2x.png 2x" width="280" height="270" alt="Упаковка питания Cat Energy">
         </picture>
         <a class="advertising__link button" href="form.html">Подобрать программу</a>
       </div>
@@ -84,16 +84,16 @@
       <h2 class="advantages__title">Как это работает</h2>
       <ul class="advantages__list">
         <li class="advantages__item advantages__item--leaf">
-          <p class="advantages__description">Функциональное питание содержит только полезные питательные вещества.</p>
+          Функциональное питание содержит только полезные питательные вещества.
         </li>
         <li class="advantages__item advantages__item--cup">
-          <p class="advantages__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+          Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
         </li>
         <li class="advantages__item advantages__item--eat">
-          <p class="advantages__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
+          Замените один-два приема обычной еды на наше функциональное питание.
         </li>
         <li class="advantages__item advantages__item--clock">
-          <p class="advantages__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
         </li>
       </ul>
     </section>
@@ -114,17 +114,19 @@
       <div class="example__slider slider">
         <div class="slider__image-container">
           <picture>
-            <source width="560" height="512" type="image/png" media="(min-width: 560px)" srcset="images/slider-before@1x.png 1x, images/slider-before@2x.png 2x">
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/slider-before@1x.png 1x, images/slider-before@2x.png 2x">
             <img class="slider__image slider__image--fat" src="images/slider-before-mobile@1x.png" srcset="images/slider-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот">
           </picture>
           <picture>
-            <source width="560" height="512" type="image/png" media="(min-width: 560px)" srcset="images/slider-after@1x.png 1x, images/slider-after@2x.png 2x">
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/slider-after@1x.png 1x, images/slider-after@2x.png 2x">
             <img class="slider__image slider__image--skinny" src="images/slider-after-mobile@1x.png" srcset="images/slider-after-mobile@2x.png" width="280" height="256" alt="Худой кот">
           </picture>
         </div>
 
         <div class="slider__tools">
-          <button class="slider__toggle" type="button"></button>
+          <button class="slider__toggle" type="button">
+            <span class="visually-hidden">Переключатель</span>
+          </button>
         </div>
 
       </div>
@@ -132,45 +134,43 @@
 
   </main>
 
-  <div class="footer-wrap">
-    <footer class="page-footer">
-      <div class="page-footer__contacts contacts">
-        <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="contacts__address">
-          ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
-        </address>
-      </div>
+  <footer class="page-footer">
+    <div class="page-footer__contacts contacts">
+      <p class="contacts__invitation">Приглашаем к сотрудничеству дилеров!</p>
+      <address class="contacts__address">
+        ул. Большая Конюшенная, д. 19/8<br>Санкт-Петербург
+      </address>
+    </div>
 
-      <div class="page-footer__map" id="map">
-      </div>
+    <div class="page-footer__map" id="map">
+    </div>
 
-      <a class="page-footer__logo" href="index.html">
-        <img class="page-footer__logo-name logo-name" src="images/footer-logo.svg" width="128" height="24" alt="Cat Energy">
-      </a>
+    <a class="page-footer__logo" href="index.html">
+      <img class="page-footer__logo-name logo-name" src="images/footer-logo.svg" width="128" height="24" alt="Cat Energy">
+    </a>
 
-      <ul class="page-footer__social social">
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="visually-hidden">YouTube</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="#">
-            <span class="visually-hidden">Telegram</span>
-          </a>
-        </li>
-      </ul>
+    <ul class="page-footer__social social">
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <span class="visually-hidden">Вконтакте</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <span class="visually-hidden">YouTube</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <span class="visually-hidden">Telegram</span>
+        </a>
+      </li>
+    </ul>
 
-      <div class="page-footer__partner">
-        <a class="page-footer__partner-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      </div>
-    </footer>
-  </div>
+    <div class="page-footer__partner">
+      <a class="page-footer__partner-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </div>
+  </footer>
 
 </body>
 
