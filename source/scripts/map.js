@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 /* global ymaps */
-=======
->>>>>>> module2-task1
+
 ymaps.ready(init);
 
 function init() {
