@@ -1,0 +1,15 @@
+.additional-cards__title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #222222;
+  text-transform: uppercase;
+}
+
+.additional-cards__parameter,
+.additional-cards__value {
+  font-family: $secondary-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+}

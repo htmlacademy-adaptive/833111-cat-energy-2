@@ -1,5 +1,11 @@
-.header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+.main-header__nav-list {
+  font-size: 20px;
+  line-height: 20px;
+  list-style: none;
+}
+
+.main-header__nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
 }

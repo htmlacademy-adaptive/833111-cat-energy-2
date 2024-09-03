@@ -1,0 +1,24 @@
+.diet-plans__list {
+  list-style: none;
+}
+
+.diet-plans__title {
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.diet-plans__description {
+  font-family: $secondary-font;
+  color: #444444;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.diet-plans__link {
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+}

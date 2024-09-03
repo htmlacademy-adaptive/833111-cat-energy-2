@@ -3,6 +3,9 @@ import { readFileSync, rmSync } from 'node:fs';
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import htmlmin from 'gulp-htmlmin';
+import {
+  nunjucksCompile
+} from 'gulp-nunjucks';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import postcss from 'gulp-postcss';
@@ -34,6 +37,7 @@ let isDevelopment = true;
 
 export function processMarkup () {
   return src(`${PATH_TO_SOURCE}**/*.html`)
+    .pipe(nunjucksCompile())
     .pipe(htmlmin({ collapseWhitespace: !isDevelopment }))
     .pipe(dest(PATH_TO_DIST))
     .pipe(server.stream());
@@ -198,6 +202,7 @@ export function runDev (done) {
   series(
     removeBuild,
     parallel(
+      copyStatic,
       processMarkup,
       processStyles,
       processScripts,
