@@ -9,11 +9,28 @@
 
 .additional-products__promo {
   font-family: $secondary-font;
-  background-color: #68b738;
+  background-color: $basic-green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 59px 61px 53px 48px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../icons/icon_gift.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 0 48px;
+  }
 }
 
 .additional-products__promo-description {
   font-family: $secondary-font;
   line-height: 20px;
-  color: #ffffff;
+  color: $basic-white;
+  margin: 0;
+  text-align: center;
 }

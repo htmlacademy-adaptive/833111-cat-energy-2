@@ -1,12 +1,22 @@
+.contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 26px 20px;
+}
+
 .contacts__invitation {
   line-height: 20px;
   text-transform: uppercase;
+  margin: 0 0 0 auto;
+  max-width: 140px;
 }
 
 .contacts__address {
   font-family: $secondary-font;
   font-size: 14px;
   line-height: 20px;
-  color: #444444;
+  color: $special_dark-grey;
   font-style: normal;
+  margin: 0 0 0 auto;
 }

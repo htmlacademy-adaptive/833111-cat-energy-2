@@ -2,10 +2,12 @@
   font-family: $primary-font;
   font-size: 16px;
   line-height: 20px;
-  color: #ffffff;
-  background-color: #68b738;
+  color: $basic-white;
+  background-color: $basic-green;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   border: none;
+  display: inline-block;
+  cursor: pointer;
 }

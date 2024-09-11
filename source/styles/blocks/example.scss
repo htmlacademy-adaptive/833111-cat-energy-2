@@ -1,29 +1,66 @@
+.example {
+  background-color: $dark-grey;
+  padding: 25px 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  gap: 20;
+}
+
 .example__title {
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
+  margin: 0 0 20px;
 }
 
 .example__description {
   font-family: $secondary-font;
   font-size: 14px;
   line-height: 18px;
-  color: #444444;
+  color: $special_dark-grey;
+  margin: 0;
+}
+
+.example__results-container {
+  display: flex;
+  gap: 32px;
+}
+
+.example__results {
+  position: relative;
+  width: 124px;
+  height: 56px;
+  border: 1px solid $special_grey;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 .example__inner-text {
   font-size: 24px;
+  text-align: center;
 }
 
 .example__overlay-text {
   font-family: $secondary-font;
   font-size: 12px;
   line-height: 12px;
-  color: #444444;
+  text-align: center;
+  color: $special_dark-grey;
+  position: absolute;
+  top: 46px;
+  padding: 0 10px;
+  background-color: $dark-grey;
 }
 
 .example__expenses {
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
+  margin: 14px 0 0;
 }
