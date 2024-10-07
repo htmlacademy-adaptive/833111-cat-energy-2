@@ -10,4 +10,12 @@
   border: none;
   display: inline-block;
   cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($basic-white, 0.3);
+  }
 }

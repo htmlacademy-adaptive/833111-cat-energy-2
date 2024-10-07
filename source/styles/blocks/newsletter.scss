@@ -1,6 +1,76 @@
+.newsletter__container {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+}
+
 .newsletter__title {
   font-size: 24px;
   font-weight: 400;
+  margin: 0 0 32px;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: $basic-green;
+    position: absolute;
+    top: 37%;
+  }
+
+  @media (max-width: $tablet-width) {
+    &::after {
+      width: 108px;
+      right: -20px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0 0 66px 40px;
+
+    &::after {
+      width: 456px;
+      right: -30px;
+    }
+
+    &::before {
+      width: 30px;
+      left: -70px;
+    }
+  }
+}
+
+.newsletter__description {
+  text-align: center;
+  margin: 0 auto 23px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    width: 650px;
+  }
+}
+
+.newsletter__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 38px;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .newsletter__form-email {
@@ -9,4 +79,26 @@
   line-height: 30px;
   color: $special_dark-grey;
   text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 16px;
+  border: 1px solid $special_grey;
+  padding: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 13px;
+    border-right: none;
+  }
+}
+
+.newsletter__form-button {
+  padding: 15px 0;
+  width: 100%;
+  font-size: 20px;
+  line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    padding: 16px 69px;
+    width: fit-content;
+  }
 }

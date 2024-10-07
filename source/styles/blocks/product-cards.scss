@@ -1,19 +1,209 @@
-.product-cards__link {
-  text-decoration: none;
+.product-cards {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 74px;
+  }
+}
+
+.product-cards__container {
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+
+  @media (max-width: 766px) {
+    border-top: 1px solid #d9d9d9;
+    padding-top: 27px;
+    padding-bottom: 25px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: calc(100% + 40px);
+      height: 1px;
+      background-color: #ebebeb;
+      position: absolute;
+      left: -20px;
+      bottom: 25px;
+    }
+  }
 }
 
 .product-cards__title {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  margin: 0 0 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 0 84px;
+  }
+}
+
+.product-cards__list {
+  display: grid;
+  gap: 0 25px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+  @media (min-width: $tablet-width) {
+    gap: 60px;
+  }
+}
+
+.product-cards__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  @media (max-width: 766px) {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    padding-top: 21px;
+    padding-bottom: 25px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: calc(100% + 40px);
+      height: 1px;
+      background-color: #ebebeb;
+      position: absolute;
+      top: 0;
+      left: -20px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 37px 40px;
+  }
+}
+
+.product-cards__image {
+  display: block;
+  margin-bottom: 19px;
+}
+
+.product-cards__image-chicken-500 {
+  width: 68px;
+  height: 86px;
+
+  @media (min-width: $tablet-width) {
+    width: 161;
+    height: 172px;
+    margin: 29px auto 41px;
+  }
+}
+
+.product-cards__image-chicken-1000 {
+  width: 84px;
+  height: 100px;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    height: 210px;
+    margin: 10px auto 22px;
+  }
+}
+
+.product-cards__image-catalog-fish-500 {
+  width: 68px;
+  height: 78px;
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+    height: 174px;
+    margin: 29px auto 41px;
+  }
+}
+
+.product-cards__image-catalog-fish-1000 {
+  width: 84px;
+  height: 100px;
+
+  @media (min-width: $tablet-width) {
+    width: 168px;
+    height: 200px;
+    margin: 16px auto 26px;
+  }
+}
+
+.product-cards__image-catalog-buckwheat-500 {
+  width: 68px;
+  height: 78px;
+
+  @media (min-width: $tablet-width) {
+    width: 161px;
+    height: 171px;
+    margin: 27px auto 41px;
+  }
+}
+
+.product-cards__image-catalog-buckwheat-1000 {
+  width: 84px;
+  height: 100px;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    height: 210px;
+    margin: 8px auto 22px;
+  }
+}
+
+.product-cards__image-catalog-rice-500 {
+  width: 72px;
+  height: 84px;
+
+  @media (min-width: $tablet-width) {
+    width: 163px;
+    height: 174px;
+    margin: 28px auto 40px;
+  }
+}
+
+.product-cards__link {
+  text-decoration: none;
+  margin: 0;
+}
+
+.product-cards__link-image {
+  @media (max-width: $tablet-width) {
+    display: grid;
+    grid-row: span 2;
+    justify-content: center;
+  }
 }
 
 .product-cards__description {
+  margin: 0 0 16px;
   font-size: 16px;
   line-height: 20px;
   color: $special_dark-grey-2;
   font-weight: 400;
   text-transform: uppercase;
+  width: 95px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    width: 135px;
+    text-align: center;
+    margin-bottom: 21px;
+  }
+}
+
+.product-cards__characteristics {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  font-size: 14px;
+  margin: 0 0 19px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 38px;
+    grid-template-columns: repeat(2, minmax(125px, auto));
+    gap: 11px 0;
+  }
 }
 
 .product-cards__parameter,
@@ -22,4 +212,23 @@
   font-size: 12px;
   line-height: 16px;
   color: $special_dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.product-cards__value {
+  margin-left: auto;
+}
+
+.product-cards__button {
+  padding: 10px 0;
+  grid-column: span 2;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+  }
 }

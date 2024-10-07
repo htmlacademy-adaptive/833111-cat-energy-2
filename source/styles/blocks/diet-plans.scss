@@ -1,3 +1,18 @@
+.diet-plans__wrap {
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 45px;
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 71px;
+    padding-top: 82px;
+  }
+}
+
 .diet-plans__list {
   list-style: none;
   padding: 0;
@@ -5,6 +20,15 @@
   flex-direction: column;
   gap: 20px;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    gap: 80px;
+  }
 }
 
 .diet-plans__item {
@@ -13,14 +37,13 @@
   align-items: center;
   gap: 20px;
   flex-direction: column;
-  padding: 0 20px;
-
-  &:last-child {
-    padding-bottom: 20px;
-  }
+  background-color: $basic-grey;
+  padding: 23px 20px 22px;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     flex-direction: row-reverse;
+    padding: 77px 63px 57px 52px;
+    gap: 53px;
 
     &::before {
       content: "";
@@ -33,6 +56,7 @@
       display: inline-block;
       margin-left: auto;
       flex-shrink: 0;
+      margin-bottom: 9px;
     }
 
     &::after {
@@ -41,7 +65,6 @@
       background-position: center;
       display: inline-block;
       background-repeat: no-repeat;
-      flex-shrink: 0;
     }
 
     &--slim::after {
@@ -49,8 +72,8 @@
       position: absolute;
       width: 140px;
       height: 194px;
-      bottom: 20px;
-      right: 30px;
+      top: 81px;
+      right: 92px;
     }
 
     &--pro::after {
@@ -58,14 +81,34 @@
       position: absolute;
       width: 268px;
       height: 112px;
-      bottom: 44px;
-      right: -33px;
+      right: 29px;
+      top: 136px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 41px 52px 55px;
   }
 }
 
 .diet-plans__container {
-  background-color: $basic-grey;
+  position: relative;
+
+  @media (max-width: 766px) {
+    &::before {
+      content: "";
+      background-color: #d9d9d9;
+      width: 100%;
+      height: 1px;
+      display: block;
+      position: absolute;
+      bottom: 36px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    content: none;
+  }
 }
 
 .diet-plans__title {
@@ -76,27 +119,28 @@
   display: flex;
   gap: 20px;
   align-items: center;
-  margin: 21px 0 29px 20px;
+  margin: 0 auto 21px;
   position: relative;
 
-  &::before {
-    content: "";
-    width: 50px;
-    height: 50px;
-    background-color: $basic-green;
-    border-radius: 50%;
-    background-size: contain;
-    background-position: center;
-    display: inline-block;
-  }
-
+  &::before,
   &::after {
     content: "";
     background-size: contain;
     background-position: center;
     display: inline-block;
-    background-repeat: no-repeat;
+  }
+
+
+  &::before {
+    width: 50px;
+    height: 50px;
+    background-color: $basic-green;
+    border-radius: 50%;
     flex-shrink: 0;
+  }
+
+  &::after {
+    background-repeat: no-repeat;
   }
 
   &--slim::after {
@@ -104,8 +148,8 @@
     position: absolute;
     width: 36px;
     height: 50px;
-    left: 8px;
-    bottom: 4px;
+    left: 7px;
+    bottom: 3px;
   }
 
   &--pro::after {
@@ -113,7 +157,7 @@
     position: absolute;
     width: 67px;
     height: 28px;
-    left: -8px;
+    left: -7px;
   }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
@@ -128,6 +172,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    font-size: 36px;
+    line-height: 36px;
     gap: 62px;
     margin: 0 auto 39px 0;
 
@@ -159,10 +205,12 @@
   color: $special_dark-grey;
   font-size: 14px;
   line-height: 18px;
-  margin: 0 33px 38px 20px;
+  margin: 0 auto 44px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 auto 48px 0;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto 52px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -177,8 +225,9 @@
   text-decoration: none;
   text-transform: uppercase;
   color: inherit;
-  margin: 0 20px 22px;
-  gap: 15px;
+  margin: 0 1px;
+  gap: 14px;
+  width: fit-content;
 
   &:active {
     opacity: 0.3;
@@ -186,8 +235,8 @@
 
   &::after {
     content: "";
-    width: 32px;
-    height: 10px;
+    width: 35px;
+    height: 12px;
     background-image: url("../../icons/icon_arrow.svg");
     display: inline-block;
     background-repeat: no-repeat;
@@ -198,5 +247,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    gap: 25px;
+    margin: 0;
   }
 }

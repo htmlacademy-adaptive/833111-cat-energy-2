@@ -1,18 +1,41 @@
 .example {
   background-color: $dark-grey;
-  padding: 25px 20px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-self: start;
-  gap: 20;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
+  }
+}
+
+.example__container {
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 101px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    padding-bottom: 75px;
+  }
 }
 
 .example__title {
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
-  margin: 0 0 20px;
+  margin: 0 0 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 76px;
+  }
 }
 
 .example__description {
@@ -20,29 +43,48 @@
   font-size: 14px;
   line-height: 18px;
   color: $special_dark-grey;
-  margin: 0;
+  margin: 0 0 21px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 54px;
+  }
 }
 
 .example__results-container {
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+  margin: 0 0 20px;
+  justify-content: space-around;
+
+  @media (min-width: $tablet-width) {
+    gap: 43px;
+    justify-content: flex-start;
+    margin: 0 0 99px;
+  }
 }
 
 .example__results {
-  position: relative;
-  width: 124px;
-  height: 56px;
-  border: 1px solid $special_grey;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0;
 }
 
 .example__inner-text {
+  display: block;
   font-size: 24px;
   text-align: center;
+  border: 1px solid $special_grey;
+  border-radius: 2px;
+  padding: 15px;
+  width: 124px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+    padding: 13px 2px 20px;
+    width: 162px;
+  }
 }
 
 .example__overlay-text {
@@ -51,16 +93,48 @@
   line-height: 12px;
   text-align: center;
   color: $special_dark-grey;
-  position: absolute;
-  top: 46px;
-  padding: 0 10px;
+  display: block;
+  padding: 0 12px;
   background-color: $dark-grey;
+  width: 88px;
+  margin: -10px auto 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $basic-white;
+    padding: 0;
+
+    &--weight {
+      width: 113px;
+    }
+
+    &--time {
+      width: 142px;
+    }
+  }
 }
 
 .example__expenses {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 18px;
   text-transform: uppercase;
   text-align: center;
-  margin: 14px 0 0;
+  margin: 0;
+
+  & span {
+    display: inline-block;
+  }
+
+  @media (min-width: $tablet-width) {
+    text-align: right;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 11px 0 0 auto;
+
+    & span {
+      display: block;
+      margin-top: 10px;
+    }
+  }
 }

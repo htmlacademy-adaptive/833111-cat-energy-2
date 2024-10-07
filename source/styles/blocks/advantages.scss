@@ -1,15 +1,31 @@
-.advantages {
-  padding: 0 20px 49px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.advantages__container {
+  padding-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 45px;
+    padding-top: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 69px;
+    padding-top: 0;
+  }
 }
 
 .advantages__title {
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  margin: 0 0 40px;
+  margin: 0 0 39px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 32px;
+  }
 }
 
 .advantages__list {
@@ -17,6 +33,18 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(249px, 1fr));
+    grid-gap: 45px 60px;
+    counter-reset: card-counter;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-gap: 45px 74px;
+  }
 }
 
 .advantages__item {
@@ -63,13 +91,72 @@
     background-size: 26px 31px;
   }
 
+
+  @media (max-width: $tablet-width) {
+    & br {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 31px;
+    position: relative;
+    margin: 0;
+    counter-increment: card-counter;
+    z-index: 1;
+    padding-top: 33px;
+    padding-bottom: 57px;
+    padding-right: 70px;
 
     &::before {
       width: 80px;
       height: 80px;
+    }
+
+    &::after {
+      content: counter(card-counter);
+      position: absolute;
+      font-family: $primary-font;
+      font-size: 280px;
+      line-height: 280px;
+      color: $basic-grey;
+      z-index: -1;
+      top: -6px;
+    }
+
+    &--leaf::after {
+      right: 100px;
+    }
+
+    &--can::after {
+      right: 79px;
+    }
+
+    &--eat::after {
+      right: 77px;
+    }
+
+    &--clock::after {
+      right: 75px;
+    }
+
+    & br {
+      display: block;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 57px;
+    padding-top: 40px;
+    padding-right: 0;
+
+    &::after {
+      left: 113px;
     }
   }
 }
