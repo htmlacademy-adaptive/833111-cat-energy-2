@@ -9,20 +9,19 @@
   padding-bottom: 0;
   position: relative;
 
-  @media (max-width: 766px) {
+  @media (max-width: $tablet-width) {
     border-top: 1px solid #d9d9d9;
     padding-top: 27px;
     padding-bottom: 25px;
 
     &::after {
       content: "";
-      display: block;
-      width: calc(100% + 40px);
-      height: 1px;
       background-color: #ebebeb;
+      width: 100%;
+      height: 1px;
+      display: block;
       position: absolute;
-      left: -20px;
-      bottom: 25px;
+      left: 0;
     }
   }
 }
@@ -47,6 +46,11 @@
 
   @media (min-width: $tablet-width) {
     gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 80px;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
   }
 }
 
@@ -164,32 +168,37 @@
 
 .product-cards__link {
   text-decoration: none;
-  margin: 0;
+  margin: 0 0 16px;
+  width: 95px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 21px;
+    width: 150px;
+  }
 }
 
 .product-cards__link-image {
   @media (max-width: $tablet-width) {
-    display: grid;
+    display: block;
     grid-row: span 2;
     justify-content: center;
+    margin: 0 auto;
   }
 }
 
 .product-cards__description {
-  margin: 0 0 16px;
+  margin: 0;
   font-size: 16px;
   line-height: 20px;
   color: $special_dark-grey-2;
   font-weight: 400;
   text-transform: uppercase;
-  width: 95px;
+  display: block;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
-    width: 135px;
     text-align: center;
-    margin-bottom: 21px;
   }
 }
 
@@ -202,7 +211,13 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 38px;
     grid-template-columns: repeat(2, minmax(125px, auto));
-    gap: 11px 0;
+    gap: 5px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 38px;
+    grid-template-columns: repeat(2, minmax(86px, auto));
+    gap: 5px 0;
   }
 }
 
@@ -216,11 +231,14 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $special_grey;
   }
 }
 
 .product-cards__value {
-  margin-left: auto;
+  margin-left: 0;
+  text-align: right;
 }
 
 .product-cards__button {

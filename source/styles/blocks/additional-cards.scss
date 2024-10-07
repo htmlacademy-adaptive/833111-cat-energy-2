@@ -3,8 +3,6 @@
   display: flex;
   flex-direction: column;
   border-top: 1 solid $special_grey;
-  border-right: 1 solid $special_grey;
-  border-left: 1 solid $special_grey;
 
   &:last-child {
     border-bottom: 1 solid $special_grey;
@@ -13,6 +11,8 @@
   @media (min-width: $tablet-width) {
     padding: 26px 38px 28px;
     flex-flow: row wrap;
+    border-right: 1 solid $special_grey;
+    border-left: 1 solid $special_grey;
   }
 }
 
@@ -37,8 +37,10 @@
   margin: 0 0 15px;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 0 auto;
+    margin-left: auto;
     grid-template-columns: 167px 92px;
+    padding-top: 2px;
+    padding-right: 2px;
   }
 }
 
@@ -54,13 +56,11 @@
     font-size: 16px;
     line-height: 20px;
     margin-left: auto;
-    margin-top: 2px;
   }
 }
 
 .additional-cards__value {
   margin-left: auto;
-  margin-right: 2px;
 }
 
 .additional-cards__button {

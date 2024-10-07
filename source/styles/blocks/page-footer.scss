@@ -1,6 +1,13 @@
+.page-footer {
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
 .page-footer__map {
   width: 100%;
   height: 362px;
+  z-index: 1;
 
   @media (min-width: $tablet-width) {
     height: 400px;

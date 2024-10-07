@@ -19,6 +19,10 @@
       width: 34px;
       right: -20px;
     }
+
+    &::before {
+      content: none;
+    }
   }
 
   @media (min-width: $tablet-width) {

@@ -6,12 +6,21 @@
   padding-bottom: 26px;
   justify-content: space-between;
 
+  &--with-background {
+    background-color: $basic-grey;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 59px 70px 60px 69px;
   }
 
-  &--with-background {
-    background-color: $basic-grey;
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    z-index: 1;
+    background-color: $basic-white;
+    padding: 60px 78px 60px 80px;
+    top: 95px;
+    left: 110px;
   }
 }
 
@@ -25,6 +34,10 @@
     font-size: 20px;
     line-height: 26px;
     max-width: 230px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 246px;
   }
 }
 
@@ -44,5 +57,10 @@
     & span {
       margin-top: 20px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    max-width: 158px;
   }
 }
