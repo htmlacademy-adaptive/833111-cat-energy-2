@@ -9,17 +9,14 @@
   display: flex;
   align-items: center;
   position: relative;
-  padding-top: 13px;
-  padding-bottom: 15px;
+  padding: 13px 20px 15px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 25px;
-    padding-bottom: 65px;
+    padding: 25px 30px 65px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 55px;
-    padding-bottom: 74px;
+    padding: 55px 110px 74px;
   }
 }
 
