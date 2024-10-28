@@ -81,6 +81,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 37px 40px;
+    background-image: linear-gradient(to bottom, $basic-white 81px, $basic-grey 0);
   }
 }
 

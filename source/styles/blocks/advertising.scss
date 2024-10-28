@@ -1,21 +1,28 @@
 .advertising {
   color: $basic-white;
-  background-color: $basic-green;
+  background-image: linear-gradient(45deg, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index-background-mobile@2x.jpg");
+  background-size: auto 302px;
+  background-position: top center;
+  background-repeat: no-repeat;
   padding-top: 27px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
+
 
   @media (min-width: $tablet-width) {
     background-color: transparent;
     padding-bottom: 0;
     padding-top: 0;
+    background-image: none;
   }
 
   @media (min-width: $desktop-width) {
     justify-content: center;
     align-items: flex-start;
     position: relative;
+    margin-left: 80px;
   }
 }
 
@@ -25,6 +32,7 @@
   font-weight: 400;
   margin: 0 0 25px;
   text-align: center;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
@@ -35,7 +43,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 36px 0 40px 79px;
+    margin: 36px 0 40px;
     z-index: 2;
   }
 }
@@ -46,6 +54,7 @@
   text-transform: uppercase;
   margin: 0 0 29px;
   text-align: center;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -56,7 +65,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 52px 80px;
+    margin: 0 0 52px;
     z-index: 2;
   }
 }
@@ -66,6 +75,8 @@
   height: 270px;
   display: block;
   margin: 0 auto 3px;
+  position: relative;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
     width: 709px;
@@ -77,16 +88,17 @@
     width: 552px;
     height: 499px;
     position: absolute;
-    left: 553px;
+    left: 369px;
     top: 0;
   }
 }
 
 .advertising__link {
   padding: 10px 63px;
+  z-index: 2;
 
   @media (min-width: $tablet-width) {
-    z-index: 1;
+    z-index: 2;
     width: fit-content;
     margin: -577px 0 526px 90px;
     padding: 14px 28px;
@@ -98,7 +110,7 @@
     padding: 14px 28px;
     font-size: 20px;
     line-height: 26px;
-    margin: 0 0 184px 80px;
+    margin: 0 0 184px;
     align-self: flex-start;
     margin-top: auto;
     z-index: 2;

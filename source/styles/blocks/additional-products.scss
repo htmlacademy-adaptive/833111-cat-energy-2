@@ -42,6 +42,14 @@
   }
 }
 
+.additional-products__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto 245px;
+    gap: 80px;
+  }
+}
+
 .additional-products__list {
   list-style: none;
   margin: 0 0 35px;
@@ -50,6 +58,10 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
   }
 }
 

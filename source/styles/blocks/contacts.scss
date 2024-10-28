@@ -47,12 +47,13 @@
   line-height: 20px;
   color: $special_dark-grey;
   font-style: normal;
+  max-width: 140px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-    width: 190px;
+    max-width: 190px;
 
     & span {
       margin-top: 20px;

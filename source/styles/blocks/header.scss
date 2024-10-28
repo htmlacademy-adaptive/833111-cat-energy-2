@@ -3,20 +3,33 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    &--with-background {
+      background-image: linear-gradient(to left, rgba(104, 183, 56, 0.85), 720px, $basic-white 0%), url("../../images/index-background-desktop@2x.jpg");
+      background-size: auto 694px;
+      background-position: top right;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+  }
 }
 
 .main-header__main-navigation {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 13px 20px 15px;
+  padding-top: 13px;
+  padding-bottom: 15px;
 
   @media (min-width: $tablet-width) {
-    padding: 25px 30px 65px;
+    padding-top: 25px;
+    padding-bottom: 65px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 55px 110px 74px;
+    padding-top: 55px;
+    padding-bottom: 74px;
   }
 }
 
@@ -150,6 +163,7 @@
   width: 100%;
   background-color: $basic-white;
   z-index: 5;
+  color: $basic-black;
 
   &--open {
     display: block;
@@ -163,6 +177,17 @@
     width: auto;
     padding: 0;
     gap: 34px;
+    background-color: transparent;
+
+    &--with-background {
+      color: $basic-black;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--with-background {
+      color: $basic-white;
+    }
   }
 }
 
@@ -198,16 +223,13 @@
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
-    padding: 0;
-
-    &[aria-current="page"] {
-      position: relative;
-    }
+    padding: 0 0 8px;
+    position: relative;
 
     &[aria-current="page"]::after {
       content: "";
       position: absolute;
-      bottom: -9px;
+      bottom: 0;
       left: 0;
       width: 100%;
       height: 2px;
@@ -218,5 +240,9 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
+
+    &--with-background[aria-current="page"]::after {
+      background-color: $basic-white;
+    }
   }
 }

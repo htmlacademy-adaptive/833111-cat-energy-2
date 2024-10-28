@@ -11,6 +11,10 @@
     margin-top: 83px;
     border: 2px solid $basic-grey;
   }
+
+  @media (min-width: $desktop-width) {
+    background-image: none;
+  }
 }
 
 .show-more__plus {
@@ -91,5 +95,14 @@
 
   @media (min-width: $tablet-width) {
     margin-top: auto;
+  }
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: $special_dark-grey;
   }
 }
