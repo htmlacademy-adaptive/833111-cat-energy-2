@@ -1,16 +1,60 @@
 .main-header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+  &--with-background {
+    background-image: linear-gradient(to top, #ffffff 0 197px, #414045 197px 500px, #ffffff 500px);
+
+    &::before {
+      content: "";
+      opacity: 0.85;
+      pointer-events: none;
+      z-index: 1;
+      background-color: #68b738;
+      width: 100%;
+      height: 304px;
+      position: absolute;
+      top: 66px;
+      right: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+
+    &::before {
+      content: none;
+    }
+  }
 
   @media (min-width: $desktop-width) {
     &--with-background {
-      background-image: linear-gradient(to left, rgba(104, 183, 56, 0.85), 720px, $basic-white 0%), url("../../images/index-background-desktop@2x.jpg");
-      background-size: auto 694px;
+      background-image: linear-gradient(to right, transparent 50%, #414045 50%);
+
+      &::before {
+        content: "";
+        opacity: 0.85;
+        pointer-events: none;
+        z-index: 1;
+        background-color: #68b738;
+        width: 50%;
+        height: 694px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+}
+
+.main-header__container {
+  @media (min-width: $desktop-width) {
+    &--with-background {
+      background-image: url("../../images/index-background-desktop@2x.jpg");
+      background-size: auto 693px;
       background-position: top right;
       background-repeat: no-repeat;
       position: relative;
+      z-index: 0;
+      margin: 0 auto;
+      max-width: $desktop-width;
     }
   }
 }
@@ -54,6 +98,10 @@
 .main-header__navigation {
   margin-left: auto;
   margin-right: 3px;
+
+  @media (min-width: $tablet-width) {
+    width: 43%;
+  }
 }
 
 .main-header__logo {
@@ -173,7 +221,7 @@
   @media (min-width: $tablet-width) {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     width: auto;
     padding: 0;
     gap: 34px;

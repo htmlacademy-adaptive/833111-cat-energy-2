@@ -18,9 +18,11 @@
   @media (min-width: $desktop-width) {
     border-right: 0;
     border-left: 0;
-    padding: 25px 0;
+    padding: 15px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 72px;
+    align-items: center;
   }
 }
 
@@ -90,6 +92,5 @@
 
   @media (min-width: $desktop-width) {
     margin-left: auto;
-    max-width: 244px;
   }
 }

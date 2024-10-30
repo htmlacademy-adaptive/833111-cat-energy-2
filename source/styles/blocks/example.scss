@@ -4,6 +4,10 @@
   @media (min-width: $tablet-width) {
     background-color: $basic-white;
   }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(to bottom, transparent 135px, $basic-grey 0%);
+  }
 }
 
 .example__container {
@@ -18,7 +22,6 @@
   @media (min-width: $desktop-width) {
     padding-top: 0;
     padding-bottom: 75px;
-    background-image: linear-gradient(to bottom, transparent 135px, $basic-grey 0%);
   }
 }
 
