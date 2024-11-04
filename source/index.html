@@ -127,24 +127,21 @@
         </div>
 
         <div class="example__slider slider">
-          <div class="slider__image-container">
-            <picture>
-              <source width="560" height="512" type="image/png" media="(min-width: 767px)" srcset="images/slider-before@1x.png 1x, images/slider-before@2x.png 2x">
-              <img class="slider__image slider__image--fat" src="images/slider-before-mobile@1x.png" srcset="images/slider-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот">
-            </picture>
-            <picture>
-              <source width="560" height="512" type="image/png" media="(min-width: 767px)" srcset="images/slider-after@1x.png 1x, images/slider-after@2x.png 2x">
-              <img class="slider__image slider__image--skinny" src="images/slider-after-mobile@1x.png" srcset="images/slider-after-mobile@2x.png" width="280" height="256" alt="Худой кот">
-            </picture>
-          </div>
-
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 767px)" srcset="images/slider-before@1x.png 1x, images/slider-before@2x.png 2x">
+            <img class="slider__image slider__image--fat" src="images/slider-before-mobile@1x.png" srcset="images/slider-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот">
+          </picture>
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 767px)" srcset="images/slider-after@1x.png 1x, images/slider-after@2x.png 2x">
+            <img class="slider__image slider__image--skinny" src="images/slider-after-mobile@1x.png" srcset="images/slider-after-mobile@2x.png" width="280" height="256" alt="Худой кот">
+          </picture>
+          <label for="slider-range" class="visually-hidden">Показать картинку до или после</label>
+          <input type="range" class="slider__range-js" min="0" max="100" value="50" step="1" id="slider-range">
           <div class="slider__tools">
-            <button class="slider__toggle" type="button">
-              <span class="visually-hidden">Переключатель</span>
-            </button>
           </div>
-
         </div>
+
+      </div>
       </div>
     </section>
 
@@ -204,6 +201,7 @@
   <script src="scripts/index.js" defer></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=f11153c7-9817-48aa-9e06-28113b79b36b&lang=ru_RU" defer></script>
   <script src="scripts/map.js" defer></script>
+  <script src="scripts/slider.js" defer></script>
 
 </body>
 

@@ -8,15 +8,32 @@
     padding-bottom: 80px;
     padding-top: 80px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 104px;
+    padding-top: 96px;
+  }
 }
 
 .newsletter__title {
   font-size: 24px;
   font-weight: 400;
   margin: 0 0 32px;
+  padding-right: 40px;
   position: relative;
+  width: fit-content;
 
-  &::after,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $basic-white;
+    z-index: -1;
+    top: 0;
+    right: 0;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -24,40 +41,40 @@
     background-color: $basic-green;
     position: absolute;
     top: 50%;
-  }
-
-  @media (max-width: $tablet-width) {
-    &::after {
-      width: 108px;
-      right: -20px;
-    }
+    box-shadow: 100vw 0 0 $basic-green;
+    z-index: -1;
+    width: 100vw;
   }
 
   @media (min-width: $tablet-width) {
     font-size: 32px;
     line-height: 32px;
-    margin: 0 0 66px 40px;
+    margin-bottom: 66px;
+    padding: 0 40px;
+  }
 
-    &::after {
-      width: 456px;
-      right: -30px;
-    }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 72px;
 
     &::before {
-      width: 30px;
-      left: -70px;
+      right: 0;
     }
   }
 }
 
+
 .newsletter__description {
   text-align: center;
-  margin: 0 auto 23px;
+  margin: 0 auto 24px;
 
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 32px;
     width: 650px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: fit-content;
   }
 }
 
@@ -67,9 +84,14 @@
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    margin: 0 38px;
     flex-direction: row;
     align-items: center;
+    margin: 0 auto;
+    min-width: 632px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 752px;
   }
 }
 
@@ -78,16 +100,25 @@
   font-size: 20px;
   line-height: 30px;
   color: $special_dark-grey;
+  background-color: $basic-white;
   text-transform: uppercase;
   width: 100%;
   margin-bottom: 16px;
-  border: 1px solid $special_grey;
+  border: 1px solid #e7e7e7;
   padding: 12px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
     padding: 13px;
     border-right: none;
+  }
+
+  &:not(:disabled):hover {
+    border: 1px solid $special_grey;
+  }
+
+  &:disabled {
+    outline: 2px solid #ff8282;
   }
 }
 

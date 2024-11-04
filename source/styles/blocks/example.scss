@@ -3,10 +3,12 @@
 
   @media (min-width: $tablet-width) {
     background-color: $basic-white;
+    background-image: linear-gradient(to bottom, transparent 600px, $basic-grey 0%);
   }
 
   @media (min-width: $desktop-width) {
     background-image: linear-gradient(to bottom, transparent 135px, $basic-grey 0%);
+    position: relative;
   }
 }
 

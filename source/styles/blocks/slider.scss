@@ -1,0 +1,80 @@
+.slider {
+  --value: 50%;
+  position: relative;
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.slider__image {
+  position: absolute;
+  top: 0;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+
+  &--fat {
+    left: 0;
+    width: var(--value);
+    object-position: left;
+  }
+
+  &--skinny {
+    right: 0;
+    width: calc(100% - var(--value));
+    object-position: right;
+  }
+}
+
+.slider__tools {
+  position: absolute;
+  top: 0;
+  left: var(--value);
+  width: 4px;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #666666;
+  transform: translateX(-50%);
+  pointer-events: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background-image: url("../../icons/tools.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+  }
+
+  &--left-edge::before {
+    clip-path: inset(0 0 0 50%);
+  }
+
+  &--right-edge::before {
+    clip-path: inset(0 50% 0 0);
+  }
+}
+
+.slider__range-js {
+  position: absolute;
+  margin: 0;
+  opacity: 0;
+  inset: 0;
+}
+
