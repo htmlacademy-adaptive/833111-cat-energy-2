@@ -13,7 +13,7 @@
   @media (min-width: $desktop-width) {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 110px;
   }
 }
 
@@ -76,5 +76,29 @@
   margin: 0;
   opacity: 0;
   inset: 0;
+
+  &:hover {
+    cursor: col-resize;
+
+    & + .slider__range-visible {
+      color: #4f4f4f;
+    }
+  }
+
+  &:active {
+    & + .slider__range-visible {
+      color: #888888;
+    }
+  }
+
+  &:focus-visible {
+    & + .slider__range-visible {
+      outline: auto;
+
+      &::before {
+        outline: auto;
+      }
+    }
+  }
 }
 

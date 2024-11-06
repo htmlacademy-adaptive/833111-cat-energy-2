@@ -22,16 +22,21 @@
   flex-direction: row;
   background-color: $basic-grey;
 
-  @media (max-width: 766px) {
+  @media (max-width: $tablet-width) {
     padding-top: 18px;
     padding-bottom: 20px;
     flex-direction: column;
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 55px;
+    padding-top: 56px;
     padding-bottom: 55px;
     gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 67px;
+    padding-bottom: 66px;
   }
 }
 
@@ -71,34 +76,33 @@
   display: flex;
   gap: 23px;
 
-  @media (max-width: 766px) {
+  &::after {
+    content: "";
     display: inline-block;
-    margin-right: auto;
-
-    svg {
-      color: #666666;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+    width: 27px;
+    height: 34px;
+    background-color: #666666;
+    mask-image: url("../../icons/footer-logo-htmlacademy.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
   }
 
   &:hover {
     color: $basic-green;
-  }
 
-  &:hover svg {
-    color: $basic-green;
+    &::after {
+      background-color: $basic-green;
+    }
   }
 
   &:active {
     color: $basic-green;
     opacity: 0.3;
-  }
 
-  &:active svg {
-    color: $basic-green;
-    opacity: 0.3;
+    &::after {
+      background-color: $basic-green;
+      opacity: 0.3;
+    }
   }
 }

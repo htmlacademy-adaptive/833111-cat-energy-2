@@ -1,6 +1,5 @@
 .diet-plans__wrap {
   padding-bottom: 20px;
-  padding-top: 20px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 45px;
@@ -87,7 +86,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 41px 52px 55px;
+    padding: 47px 52px 60px;
   }
 }
 
@@ -186,15 +185,16 @@
       background-image: url("../../icons/cat-slim-desktop.svg");
       width: 70px;
       height: 97px;
-      bottom: 8px;
-      left: 16px;
+      bottom: 9px;
+      left: 15px;
     }
 
     &--pro::after {
       background-image: url("../../icons/cat-pro-desktop.svg");
       width: 134px;
       height: 56px;
-      left: -17px;
+      left: -20px;
+      top: 20px;
     }
   }
 }
@@ -214,7 +214,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 auto 23px 0;
+    margin: 0 auto 27px 0;
+    width: 467px;
   }
 }
 

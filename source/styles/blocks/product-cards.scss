@@ -2,6 +2,10 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 74px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .product-cards__container {
@@ -11,7 +15,6 @@
 
   @media (max-width: $tablet-width) {
     border-top: 1px solid #d9d9d9;
-    padding-top: 27px;
     padding-bottom: 25px;
 
     &::after {
@@ -49,7 +52,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    gap: 80px;
+    gap: 62px 80px;
     grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
   }
 }
@@ -87,7 +90,7 @@
 
 .product-cards__image {
   display: block;
-  margin-bottom: 19px;
+  margin: 0 auto 20px;
 }
 
 .product-cards__image-chicken-500 {
@@ -141,7 +144,7 @@
   @media (min-width: $tablet-width) {
     width: 161px;
     height: 171px;
-    margin: 27px auto 41px;
+    margin: 30px auto 42px;
   }
 }
 
@@ -152,7 +155,7 @@
   @media (min-width: $tablet-width) {
     width: 200px;
     height: 210px;
-    margin: 8px auto 22px;
+    margin: 10px auto 25px;
   }
 }
 
@@ -173,8 +176,13 @@
   width: 95px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 21px;
-    width: 150px;
+    margin-bottom: 0;
+    width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: -9px;
+    width: 190px;
   }
 }
 
@@ -182,7 +190,6 @@
   @media (max-width: $tablet-width) {
     display: block;
     grid-row: span 2;
-    justify-content: center;
     margin: 0 auto;
   }
 }
@@ -200,6 +207,12 @@
     font-size: 20px;
     line-height: 24px;
     text-align: center;
+    width: 150px;
+    margin: 0 auto 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 32px;
   }
 }
 
@@ -210,14 +223,14 @@
   margin: 0 0 19px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 38px;
+    margin-bottom: 33px;
     grid-template-columns: repeat(2, minmax(125px, auto));
-    gap: 5px 0;
+    gap: 6px 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 38px;
-    grid-template-columns: repeat(2, minmax(86px, auto));
+    margin-bottom: 30px;
+    grid-template-columns: repeat(2, minmax(84px, auto));
     gap: 5px 0;
   }
 }
@@ -234,6 +247,15 @@
     line-height: 20px;
     padding-bottom: 4px;
     border-bottom: 1px solid $special_grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 6px;
+
+    &:last-child {
+      padding-bottom: 11px;
+      margin-right: 2px;
+    }
   }
 }
 
