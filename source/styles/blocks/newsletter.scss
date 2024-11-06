@@ -40,7 +40,7 @@
     height: 2px;
     background-color: $basic-green;
     position: absolute;
-    top: 40%;
+    top: 45%;
     box-shadow: 100vw 0 0 $basic-green;
     z-index: -1;
     width: 100vw;
@@ -49,8 +49,12 @@
   @media (min-width: $tablet-width) {
     font-size: 32px;
     line-height: 32px;
-    margin-bottom: 66px;
+    margin-bottom: 67px;
     padding: 0 40px;
+
+    &::before {
+      right: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -58,11 +62,6 @@
     line-height: 40px;
     margin-bottom: 72px;
     padding: 0 40px 0 0;
-
-    &::before {
-      right: 0;
-      top: 45%;
-    }
   }
 }
 

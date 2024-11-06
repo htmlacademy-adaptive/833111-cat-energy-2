@@ -23,7 +23,7 @@
     height: 2px;
     background-color: $basic-green;
     position: absolute;
-    top: 40%;
+    top: 45%;
     box-shadow: 100vw 0 0 $basic-green;
     z-index: -1;
     width: 100vw;
@@ -45,10 +45,6 @@
     font-size: 40px;
     line-height: 40px;
     padding: 0 40px 0 0;
-
-    &::before {
-      top: 45%;
-    }
   }
 }
 
