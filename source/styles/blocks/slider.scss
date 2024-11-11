@@ -76,23 +76,25 @@
   margin: 0;
   opacity: 0;
   inset: 0;
+  width: 100%;
+  height: 100%;
 
   &:hover {
     cursor: col-resize;
 
-    & + .slider__range-visible {
+    & + .slider__tools {
       color: #4f4f4f;
     }
   }
 
   &:active {
-    & + .slider__range-visible {
+    & + .slider__tools {
       color: #888888;
     }
   }
 
   &:focus-visible {
-    & + .slider__range-visible {
+    & + .slider__tools {
       outline: auto;
 
       &::before {

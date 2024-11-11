@@ -22,12 +22,6 @@
   display: block;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -40,4 +34,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: $basic-black;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }

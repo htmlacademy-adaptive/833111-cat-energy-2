@@ -230,8 +230,18 @@
   gap: 14px;
   width: fit-content;
 
+  &:hover {
+    &::after {
+      background-image: url("../../icons/icon_arrow_long.svg");
+    }
+  }
+
   &:active {
     opacity: 0.3;
+
+    &::after {
+      background-image: url("../../icons/icon_arrow_long.svg");
+    }
   }
 
   &::after {

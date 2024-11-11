@@ -109,8 +109,14 @@
   height: 100px;
 
   @media (min-width: $tablet-width) {
-    width: 200px;
-    height: 210px;
+    width: 168px;
+    height: 206px;
+    margin: 10px auto 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 172px;
+    height: 196px;
     margin: 10px auto 22px;
   }
 }
@@ -135,6 +141,12 @@
     height: 200px;
     margin: 16px auto 26px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+    height: 210px;
+    margin: 16px auto 26px;
+  }
 }
 
 .product-cards__image-catalog-buckwheat-500 {
@@ -153,7 +165,13 @@
   height: 100px;
 
   @media (min-width: $tablet-width) {
-    width: 200px;
+    width: 168px;
+    height: 200px;
+    margin: 10px auto 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
     height: 210px;
     margin: 10px auto 25px;
   }
