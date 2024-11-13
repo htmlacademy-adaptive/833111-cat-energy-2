@@ -60,6 +60,7 @@
     background-position: center;
     background-size: contain;
     transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
   }
 
   &--left-edge::before {
@@ -82,25 +83,22 @@
   &:hover {
     cursor: col-resize;
 
-    & + .slider__tools {
-      color: #4f4f4f;
+    & + .slider__tools::before {
+      transform: translate(-50%, -50%) scale(1.2);
     }
   }
 
   &:active {
-    & + .slider__tools {
-      color: #888888;
+    & + .slider__tools::before {
+      transform: translate(-50%, -50%) scale(0.95);
     }
   }
 
   &:focus-visible {
     & + .slider__tools {
-      outline: auto;
-
-      &::before {
-        outline: auto;
-      }
+      outline: 2px solid #4f4f4f;
+      border-radius: 10px;
+      outline-offset: 2px;
     }
   }
 }
-

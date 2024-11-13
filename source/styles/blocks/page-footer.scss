@@ -24,7 +24,7 @@
   background-color: $basic-grey;
 
   @media (max-width: $tablet-width) {
-    padding-top: 18px;
+    padding-top: 19px;
     padding-bottom: 20px;
     flex-direction: column;
   }
@@ -57,28 +57,17 @@
 }
 
 .page-footer__logo-name {
-  &::after {
-    content: "";
-    display: inline-block;
-    width: 128px;
-    height: 100%;
-    background-color: #111111;
-    mask-image: url("../../images/footer-logo.svg");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
+  fill: currentColor;
+  color: inherit;
+  width: 128px;
+  height: 24px;
+
+  &:hover svg {
+    color: #3e3e3e;
   }
 
-  &:hover {
-    &::after {
-      background-color: #3e3e3e;
-    }
-  }
-
-  &:active {
-    &::after {
-      background-color: #6b6b6b;
-    }
+  &:active svg {
+    color: #6b6b6b;
   }
 }
 
@@ -92,9 +81,9 @@
 .page-footer__partner-link {
   font-family: $secondary-font;
   line-height: 34px;
+  display: flex;
   color: $special_dark-grey;
   text-decoration: none;
-  display: flex;
   gap: 23px;
 
   &::after {

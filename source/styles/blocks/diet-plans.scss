@@ -229,9 +229,20 @@
   gap: 14px;
   width: fit-content;
 
+  &::after {
+    content: "";
+    width: 35px;
+    height: 12px;
+    background-image: url("../../icons/icon_arrow_long.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: left -8px center;
+    background-size: contain;
+  }
+
   &:hover {
     &::after {
-      background-image: url("../../icons/icon_arrow_long.svg");
+      background-position: left -2 center;
     }
   }
 
@@ -239,19 +250,8 @@
     opacity: 0.3;
 
     &::after {
-      background-image: url("../../icons/icon_arrow_long.svg");
+      background-position: left -2 center;
     }
-  }
-
-  &::after {
-    content: "";
-    width: 35px;
-    height: 12px;
-    background-image: url("../../icons/icon_arrow.svg");
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
   }
 
   @media (min-width: $tablet-width) {

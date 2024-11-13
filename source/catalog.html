@@ -32,7 +32,7 @@
       <nav class="main-header__navigation">
         <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
-        <ul class="main-header__nav-list">
+        <ul class="main-header__nav-list main-header__nav-list--no-js">
           <li class="main-header__nav-item">
             <a class="main-header__nav-link" href="index.html">Главная</a>
           </li>
@@ -47,7 +47,6 @@
       </nav>
     </div>
 
-    </div>
   </header>
 
   <main class="catalog-container">
@@ -126,7 +125,7 @@
             <a class="product-cards__link product-cards__link-image" href="#">
               <picture>
                 <source width="168" height="200" type="image/png" media="(min-width: 767px)" srcset="images/catalog-fish-1000_tablet@1x.png 1x, images/catalog-fish-1000_tablet@2x.png 2x">
-                <source width="169" height="210" type="image/png" media="(min-width: 1439px)" srcset="images/catalog-fish-1000_desktop@1x.png 1x, images/catalog-fish-1000_desktop@2x.png 2x">
+                <source width="172" height="196" type="image/png" media="(min-width: 1439px)" srcset="images/catalog-fish-1000_desktop@1x.png 1x, images/catalog-fish-1000_desktop@2x.png 2x">
                 <img class="product-cards__image product-cards__image-catalog-fish-1000" src="images/catalog-fish-1000_mobile@1x.png" srcset="images/catalog-fish-1000_mobile@2x.png 2x" width="84" height="100" alt="Упаковка Кэт энерджи с рыбой  1000 грамм">
               </picture>
             </a>
@@ -170,7 +169,7 @@
             <a class="product-cards__link product-cards__link-image" href="#">
               <picture>
                 <source width="168" height="200" type="image/png" media="(min-width: 767px)" srcset="images/catalog-buckwheat-1000_tablet@1x.png 1x, images/catalog-buckwheat-1000_tablet@2x.png 2x">
-                <source width="169" height="210" type="image/png" media="(min-width: 1439px)" srcset="images/catalog-buckwheat-1000_desktop@1x.png 1x, images/catalog-buckwheat-1000_desktop@2x.png 2x">
+                <source width="172" height="196" type="image/png" media="(min-width: 1439px)" srcset="images/catalog-buckwheat-1000_desktop@1x.png 1x, images/catalog-buckwheat-1000_desktop@2x.png 2x">
                 <img class="product-cards__image product-cards__image-catalog-buckwheat-1000" src="images/catalog-buckwheat-1000_mobile@2x.png" srcset="images/catalog-buckwheat-1000_mobile@2x.png 2x" width="84" height="100" alt="Упаковка Кэт энерджи с гречкой  1000 грамм">
               </picture>
             </a>
@@ -224,7 +223,7 @@
     <section class="additional-products">
       <div class="additional-products__container container">
 
-        <h2 class="additional-products__title">Дополнительные товары</h2>
+        <h2 class="additional-products__title title">Дополнительные товары</h2>
 
         <div class="additional-products__wrapper">
           <ul class="additional-products__list">
@@ -276,7 +275,7 @@
 
     <section class="newsletter">
       <div class="newsletter__container container">
-        <h2 class="newsletter__title">Акции и новинки</h2>
+        <h2 class="newsletter__title title">Акции и новинки</h2>
         <p class="newsletter__description">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
         <form class="newsletter__form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="email">Ваш e-mail</label>
@@ -287,7 +286,6 @@
     </section>
 
   </main>
-  </div>
 
   <footer class="page-footer">
     <div class="page-footer__contacts contacts contacts--with-background container">
@@ -303,6 +301,10 @@
     <div class="page-footer__container container">
       <div class="page-footer__wrap">
         <a class="page-footer__logo-name" href="index.html">
+          <span class="visually-hidden">Cat Energy</span>
+          <svg class="page-footer__footer-name" width="128" height="25">
+            <use href="../../icons/stack.svg#footer-logo"></use>
+          </svg>
         </a>
       </div>
 

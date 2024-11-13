@@ -2,38 +2,33 @@
   &--with-background {
     position: relative;
 
+    &::before,
     &::after {
       content: "";
-      opacity: 0.85;
-      pointer-events: none;
-      background-color: #68b738;
-      width: 100%;
-      height: 53%;
       position: absolute;
       top: 66px;
+      width: 100%;
+      height: 53%;
+      z-index: -1;
+    }
+
+    &::after {
+      background-color: $basic-green;
+      opacity: 0.85;
+      pointer-events: none;
     }
 
     &::before {
-      content: "";
       background-image: url("../../images/index-background-mobile@2x.jpg");
       background-color: #4e4d4d;
       background-size: contain;
       background-position: top center;
       background-repeat: no-repeat;
-      width: 100%;
-      height: 53%;
-      position: absolute;
-      top: 66px;
-      right: 0;
-      z-index: -1;
     }
   }
 
   @media (min-width: $tablet-width) {
-    &::before {
-      content: none;
-    }
-
+    &::before,
     &::after {
       content: none;
     }
@@ -97,6 +92,10 @@
     gap: 13px;
     align-items: center;
   }
+
+  @media (min-width: $desktop-width) {
+    gap: 14px;
+  }
 }
 
 .main-header__navigation {
@@ -152,7 +151,7 @@
     border: 0;
     cursor: pointer;
     position: absolute;
-    transform: translate(-88%, -52%);
+    transform: translate(-92%, 27%);
     z-index: 10;
 
     &::before,
@@ -222,6 +221,10 @@
     padding: 0;
   }
 
+  &--no-js {
+    display: block;
+  }
+
   @media (min-width: $tablet-width) {
     position: relative;
     display: flex;
@@ -277,7 +280,7 @@
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
-    padding: 12px 0 8px;
+    padding: 14px 0 9px;
     position: relative;
 
     &[aria-current="page"]::after {
@@ -294,6 +297,7 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
+    padding-top: 16px;
 
     &--with-background[aria-current="page"]::after {
       background-color: $basic-white;

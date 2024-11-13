@@ -32,7 +32,7 @@
       <nav class="main-header__navigation">
         <button class="main-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
-        <ul class="main-header__nav-list main-header__nav-list--with-background">
+        <ul class="main-header__nav-list main-header__nav-list--with-background main-header__nav-list--no-js">
           <li class="main-header__nav-item">
             <a class="main-header__nav-link main-header__nav-link--with-background" href="index.html" aria-current="page">Главная</a>
           </li>
@@ -57,7 +57,6 @@
       </picture>
       <a class="advertising__link button" href="#">Подобрать программу</a>
 
-    </div>
     </div>
 
   </header>
@@ -143,9 +142,6 @@
     </section>
 
   </main>
-  </div>
-
-  </main>
 
   <footer class="page-footer">
     <div class="page-footer__contacts contacts container">
@@ -161,6 +157,10 @@
     <div class="page-footer__container container">
       <div class="page-footer__wrap">
         <a class="page-footer__logo-name" href="index.html">
+          <span class="visually-hidden">Cat Energy</span>
+          <svg class="page-footer__footer-name" width="128" height="25">
+            <use href="../../icons/stack.svg#footer-logo"></use>
+          </svg>
         </a>
       </div>
 
@@ -197,7 +197,7 @@
   <script src="https://api-maps.yandex.ru/2.1/?apikey=f11153c7-9817-48aa-9e06-28113b79b36b&lang=ru_RU" defer></script>
   <script src="scripts/map.js" defer></script>
   <script src="scripts/slider.js" defer></script>
-  </div>
+
 </body>
 
 </html>
