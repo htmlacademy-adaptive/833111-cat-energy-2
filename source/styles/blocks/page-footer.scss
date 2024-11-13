@@ -57,10 +57,13 @@
 }
 
 .page-footer__logo-name {
-  fill: currentColor;
   color: inherit;
   width: 128px;
   height: 24px;
+
+  svg {
+    fill: currentColor;
+  }
 
   &:hover svg {
     color: #3e3e3e;
