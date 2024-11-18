@@ -17,13 +17,14 @@
 }
 
 .page-footer__container {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
-  flex-direction: row;
   background-color: $basic-grey;
 
   @media (max-width: $tablet-width) {
+    display: flex;
+    align-items: center;
     padding-top: 19px;
     padding-bottom: 20px;
     flex-direction: column;
@@ -43,6 +44,8 @@
 
 .page-footer__wrap {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 
   @media (max-width: 766px) {
     padding: 20px 0;
