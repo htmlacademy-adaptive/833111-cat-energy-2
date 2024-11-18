@@ -61,16 +61,12 @@
   width: 128px;
   height: 24px;
 
-  svg {
-    fill: currentColor;
-  }
-
   &:hover svg {
-    color: #3e3e3e;
+    fill: #3e3e3e;
   }
 
   &:active svg {
-    color: #6b6b6b;
+    fill: #6b6b6b;
   }
 }
 
