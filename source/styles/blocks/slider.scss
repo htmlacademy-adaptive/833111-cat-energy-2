@@ -83,14 +83,24 @@
   &:hover {
     cursor: col-resize;
 
+    & + .slider__tools {
+      background-color: $basic-green;
+    }
+
     & + .slider__tools::before {
-      transform: translate(-50%, -50%) scale(1.2);
+      background-image: url("../../icons/tools-hover.svg");
     }
   }
 
   &:active {
+    & + .slider__tools {
+      background-color: #5eaa2f;
+      opacity: 0.6;
+    }
+
     & + .slider__tools::before {
-      transform: translate(-50%, -50%) scale(0.95);
+      background-image: url("../../icons/tools-active.svg");
+      opacity: 0.6;
     }
   }
 

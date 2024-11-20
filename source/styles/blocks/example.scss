@@ -41,6 +41,7 @@
 
   @media (min-width: $desktop-width) {
     margin: 0 0 76px;
+    width: 50%;
   }
 }
 
@@ -122,15 +123,8 @@
     font-size: 14px;
     line-height: 14px;
     background-color: $basic-white;
-    padding: 0;
-
-    &--weight {
-      width: 113px;
-    }
-
-    &--time {
-      width: 142px;
-    }
+    padding: 0 10px;
+    width: fit-content;
   }
 
   @media (min-width: $desktop-width) {
@@ -164,9 +158,12 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    display: grid;
+    grid-template-columns: 174px 90px;
+    gap: 63px;
+  }
 
-    & span {
-      margin-left: 63px;
-    }
+  @media (min-width: $desktop-width) {
+    text-align: left;
   }
 }

@@ -75,14 +75,14 @@
             <div class="diet-plans__container">
               <h3 class="diet-plans__title diet-plans__title--slim">Похудение</h3>
               <p class="diet-plans__description">Ваш кот весит больше собаки&nbsp;и почти утратил способность лазить по&nbsp;деревьям? Пора на&nbsp;диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="diet-plans__link" href="catalog.html">Каталог Slim</a>
+              <a class="diet-plans__link" href="#">Каталог Slim</a>
             </div>
           </li>
           <li class="diet-plans__item diet-plans__item--pro">
             <div class="diet-plans__container">
               <h3 class="diet-plans__title diet-plans__title--pro">Набор массы</h3>
               <p class="diet-plans__description">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="diet-plans__link" href="catalog.html">Каталог PRO</a>
+              <a class="diet-plans__link" href="#">Каталог PRO</a>
             </div>
           </li>
         </ul>
@@ -92,7 +92,7 @@
     <section class="advantages">
       <div class="advantages__container container">
         <h2 class="advantages__title">Как это работает</h2>
-        <ul class="advantages__list">
+        <ol class="advantages__list">
           <li class="advantages__item advantages__item--leaf">
             Функциональное питание содержит только полезные питательные вещества.
           </li>
@@ -105,7 +105,7 @@
           <li class="advantages__item advantages__item--clock">
             Уже через месяц наслаждайтесь изменениями к лучшему<br>вашего питомца!
           </li>
-        </ul>
+        </ol>
       </div>
     </section>
 
@@ -139,8 +139,8 @@
             <source width="560" height="512" type="image/png" media="(min-width: 767px)" srcset="images/slider-after@1x.png 1x, images/slider-after@2x.png 2x">
             <img class="slider__image slider__image--skinny" src="images/slider-after-mobile@1x.png" srcset="images/slider-after-mobile@2x.png" width="280" height="256" alt="Худой кот">
           </picture>
-          <label for="slider-range" class="visually-hidden">Показать картинку до или после</label>
-          <input type="range" class="slider__range-js" min="0" max="100" value="50" step="1" id="slider-range">
+          <label class="visually-hidden" for="slider-range">Показать картинку до или после</label>
+          <input class="slider__range-js" type="range" name="slider-range" min="0" max="100" value="50" step="1" id="slider-range">
           <div class="slider__tools">
           </div>
         </div>

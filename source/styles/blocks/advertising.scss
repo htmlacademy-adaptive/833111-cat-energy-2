@@ -39,6 +39,7 @@
   @media (min-width: $desktop-width) {
     margin: 36px 0 40px 80px;
     z-index: 2;
+    width: 38%;
   }
 }
 
@@ -61,6 +62,7 @@
   @media (min-width: $desktop-width) {
     margin: 0 0 52px 80px;
     z-index: 2;
+    width: 38%;
   }
 }
 
@@ -84,6 +86,7 @@
     position: absolute;
     bottom: 54px;
     left: 557px;
+    top: 0;
   }
 }
 
@@ -101,12 +104,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 14px 28px;
+    padding: 14px 27px;
     font-size: 20px;
     line-height: 26px;
     margin: 0 0 184px 80px;
     align-self: flex-start;
     margin-top: auto;
     z-index: 2;
+    max-width: 244px;
   }
 }

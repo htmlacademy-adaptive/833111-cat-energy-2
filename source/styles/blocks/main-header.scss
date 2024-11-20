@@ -21,7 +21,7 @@
     &::before {
       background-image: url("../../images/index-background-mobile@2x.jpg");
       background-color: #4e4d4d;
-      background-size: contain;
+      background-size: cover;
       background-position: top center;
       background-repeat: no-repeat;
     }
@@ -240,7 +240,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    gap: 33px;
+    gap: 20px 33px;
 
     &--with-background {
       color: $basic-white;
