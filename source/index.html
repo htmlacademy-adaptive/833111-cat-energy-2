@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="styles/styles.scss" as="style" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="images/index-can-desktop@2x.webp" as="image">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
@@ -122,13 +126,13 @@
             <source width="560" height="512" type="image/webp" media="(min-width: 767px)" srcset="images/slider-before@1x.webp 1x, images/slider-before@2x.webp 2x">
             <source width="280" height="256" type="image/webp" srcset="images/slider-before-mobile@1x.webp 1x, images/slider-before-mobile@2x.webp 2x">
             <source width="560" height="512" type="image/png" media="(min-width: 767px)" srcset="images/slider-before@1x.png 1x, images/slider-before@2x.png 2x">
-            <img class="slider__image slider__image--fat" src="images/slider-before-mobile@1x.png" srcset="images/slider-before-mobile@2x.png 2x" width="280" height="256" alt="Толстый кот">
+            <img class="slider__image slider__image--fat" src="images/slider-before-mobile@1x.png" srcset="images/slider-before-mobile@2x.png 2x" loading="lazy" width="280" height="256" alt="Толстый кот">
           </picture>
           <picture>
             <source width="560" height="512" type="image/webp" media="(min-width: 767px)" srcset="images/slider-after@1x.webp 1x, images/slider-after@2x.webp 2x">
             <source width="280" height="256" type="image/webp" srcset="images/slider-after-mobile@1x.webp 1x, images/slider-after-mobile@2x.webp 2x">
             <source width="560" height="512" type="image/png" media="(min-width: 767px)" srcset="images/slider-after@1x.png 1x, images/slider-after@2x.png 2x">
-            <img class="slider__image slider__image--skinny" src="images/slider-after-mobile@1x.png" srcset="images/slider-after-mobile@2x.png" width="280" height="256" alt="Худой кот">
+            <img class="slider__image slider__image--skinny" src="images/slider-after-mobile@1x.png" srcset="images/slider-after-mobile@2x.png" loading="lazy" width="280" height="256" alt="Худой кот">
           </picture>
           <label class="visually-hidden" for="slider-range">Показать картинку до или после</label>
           <input class="slider__range-js" type="range" name="slider-range" min="0" max="100" value="50" step="1" id="slider-range">

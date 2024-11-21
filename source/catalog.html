@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <title>HTML Academy: Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="styles/styles.scss" as="style" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
@@ -60,7 +63,7 @@
                 <source width="161" height="172" type="image/webp" media="(min-width: 767px)" srcset="images/catalog-chicken-500@1x.webp 1x, images/catalog-chicken-500@2x.webp 2x">
                 <source width="68" height="86" type="image/png" srcset="images/catalog-chicken-500@1x.webp 1x, images/catalog-chicken-500@2x.webp 2x">
                 <source width="161" height="172" type="image/png" media="(min-width: 767px)" srcset="images/catalog-chicken-500@1x.png 1x, images/catalog-chicken-500@2x.png 2x">
-                <img class="product-cards__image product-cards__image-chicken-500" src="images/catalog-chicken-500_mobile@1x.png" srcset="images/catalog-chicken-500_mobile@2x.png 2x" width="68" height="86" alt="Упаковка Кэт энерджи с курицей 500 грамм">
+                <img class="product-cards__image product-cards__image-chicken-500" src="images/catalog-chicken-500_mobile@1x.png" srcset="images/catalog-chicken-500_mobile@2x.png 2x" loading="lazy" width="68" height="86" alt="Упаковка Кэт энерджи с курицей 500 грамм">
               </picture>
             </a>
             <a class="product-cards__link" href="#">
@@ -85,7 +88,7 @@
                 <source width="84" height="100" type="image/webp" srcset="images/catalog-chicken-1000_mobile@1x.webp 1x, images/catalog-chicken-1000_mobile@2x.webp 2x">
                 <source width="168" height="206" type="image/png" media="(min-width: 767px)" srcset="images/catalog-chicken-1000_tablet@1x.png 1x, images/catalog-chicken-1000_tablet@2x.png 2x">
                 <source width="172" height="196" type="image/png" media="(min-width: 1439px)" srcset="images/catalog-chicken-1000_desktop@1x.png 1x, images/catalog-chicken-1000_desktop@2x.png 2x">
-                <img class="product-cards__image product-cards__image-chicken-1000" src="images/catalog-chicken-1000_mobile@1x.png" srcset="images/catalog-chicken-1000_mobile@2x.png 2x" width="84" height="100" alt="Упаковка Кэт энерджи с курицей 1000 грамм">
+                <img class="product-cards__image product-cards__image-chicken-1000" src="images/catalog-chicken-1000_mobile@1x.png" srcset="images/catalog-chicken-1000_mobile@2x.png 2x" loading="lazy" width="84" height="100" alt="Упаковка Кэт энерджи с курицей 1000 грамм">
               </picture>
             </a>
             <a class="product-cards__link" href="#">
@@ -108,7 +111,7 @@
                 <source width="163" height="174" type="image/webp" media="(min-width: 767px)" srcset="images/catalog-fish-500@1x.webp 1x, images/catalog-fish-500@2x.webp 2x">
                 <source width="68" height="78" type="image/png" srcset="images/catalog-fish-500@1x.webp 1x, images/catalog-fish-500@2x.webp 2x">
                 <source width="163" height="174" type="image/png" media="(min-width: 767px)" srcset="images/catalog-fish-500@1x.png 1x, images/catalog-fish-500@2x.png 2x">
-                <img class="product-cards__image product-cards__image-catalog-fish-500" src="images/catalog-fish-500_mobile@1x.png" srcset="images/catalog-fish-500_mobile@2x.png 2x" width="68" height="78" alt="Упаковка Кэт энерджи с рыбой  500 грамм">
+                <img class="product-cards__image product-cards__image-catalog-fish-500" src="images/catalog-fish-500_mobile@1x.png" srcset="images/catalog-fish-500_mobile@2x.png 2x" loading="lazy" width="68" height="78" alt="Упаковка Кэт энерджи с рыбой  500 грамм">
               </picture>
             </a>
             <a class="product-cards__link" href="#">
@@ -133,7 +136,7 @@
                 <source width="84" height="100" type="image/webp" srcset="images/catalog-fish-1000_mobile@1x.webp 1x, images/catalog-fish-1000_mobile@2x.webp 2x">
                 <source width="168" height="200" type="image/png" media="(min-width: 767px)" srcset="images/catalog-fish-1000_tablet@1x.png 1x, images/catalog-fish-1000_tablet@2x.png 2x">
                 <source width="172" height="196" type="image/png" media="(min-width: 1439px)" srcset="images/catalog-fish-1000_desktop@1x.png 1x, images/catalog-fish-1000_desktop@2x.png 2x">
-                <img class="product-cards__image product-cards__image-catalog-fish-1000" src="images/catalog-fish-1000_mobile@1x.png" srcset="images/catalog-fish-1000_mobile@2x.png 2x" width="84" height="100" alt="Упаковка Кэт энерджи с рыбой  1000 грамм">
+                <img class="product-cards__image product-cards__image-catalog-fish-1000" src="images/catalog-fish-1000_mobile@1x.png" srcset="images/catalog-fish-1000_mobile@2x.png 2x" loading="lazy" width="84" height="100" alt="Упаковка Кэт энерджи с рыбой  1000 грамм">
               </picture>
             </a>
             <a class="product-cards__link" href="#">
@@ -156,7 +159,7 @@
                 <source width="161" height="171" type="image/webp" media="(min-width: 767px)" srcset="images/catalog-buckwheat-500@1x.webp 1x, images/catalog-buckwheat-500@2x.webp 2x">
                 <source width="68" height="78" type="image/png" srcset="images/catalog-buckwheat-500@1x.webp 1x, images/catalog-buckwheat-500@2x.webp 2x">
                 <source width="161" height="171" type="image/png" media="(min-width: 767px)" srcset="images/catalog-buckwheat-500@1x.png 1x, images/catalog-buckwheat-500@2x.png 2x">
-                <img class="product-cards__image product-cards__image-catalog-buckwheat-500" src="images/catalog-buckwheat-500_mobile@1x.png" srcset="images/catalog-buckwheat-500_mobile@2x.png 2x" width="68" height="78" alt="Упаковка Кэт энерджи с гречкой  500 грамм">
+                <img class="product-cards__image product-cards__image-catalog-buckwheat-500" src="images/catalog-buckwheat-500_mobile@1x.png" srcset="images/catalog-buckwheat-500_mobile@2x.png 2x" loading="lazy" width="68" height="78" alt="Упаковка Кэт энерджи с гречкой  500 грамм">
               </picture>
             </a>
             <a class="product-cards__link" href="#">
@@ -181,7 +184,7 @@
                 <source width="84" height="100" type="image/webp" srcset="images/catalog-buckwheat-1000_mobile@1x.webp 1x, images/catalog-buckwheat-1000_mobile@2x.webp 2x">
                 <source width="168" height="200" type="image/png" media="(min-width: 767px)" srcset="images/catalog-buckwheat-1000_tablet@1x.png 1x, images/catalog-buckwheat-1000_tablet@2x.png 2x">
                 <source width="172" height="196" type="image/png" media="(min-width: 1439px)" srcset="images/catalog-buckwheat-1000_desktop@1x.png 1x, images/catalog-buckwheat-1000_desktop@2x.png 2x">
-                <img class="product-cards__image product-cards__image-catalog-buckwheat-1000" src="images/catalog-buckwheat-1000_mobile@2x.png" srcset="images/catalog-buckwheat-1000_mobile@2x.png 2x" width="84" height="100" alt="Упаковка Кэт энерджи с гречкой  1000 грамм">
+                <img class="product-cards__image product-cards__image-catalog-buckwheat-1000" src="images/catalog-buckwheat-1000_mobile@2x.png" srcset="images/catalog-buckwheat-1000_mobile@2x.png 2x" loading="lazy" width="84" height="100" alt="Упаковка Кэт энерджи с гречкой  1000 грамм">
               </picture>
             </a>
             <a class="product-cards__link" href="#">
@@ -204,7 +207,7 @@
                 <source width="163" height="174" type="image/webp" media="(min-width: 767px)" srcset="images/catalog-rice-500@1x.webp 1x, images/catalog-rice-500@2x.webp 2x">
                 <source width="72" height="84" type="image/png" srcset="images/catalog-rice-500_mobile@1x.webp 1x, images/catalog-rice-500_mobile@2x.webp 2x">
                 <source width="163" height="174" type="image/png" media="(min-width: 767px)" srcset="images/catalog-rice-500@1x.png 1x, images/catalog-rice-500@2x.png 2x">
-                <img class="product-cards__image product-cards__image-catalog-rice-500" src="images/catalog-rice-500_mobile@1x.png" srcset="images/catalog-rice-500_mobile@2x.png 2x" width="72" height="84" alt="Упаковка Кэт энерджи с рисом  500 грамм">
+                <img class="product-cards__image product-cards__image-catalog-rice-500" src="images/catalog-rice-500_mobile@1x.png" srcset="images/catalog-rice-500_mobile@2x.png 2x" loading="lazy" width="72" height="84" alt="Упаковка Кэт энерджи с рисом  500 грамм">
               </picture>
             </a>
             <a class="product-cards__link" href="#">
