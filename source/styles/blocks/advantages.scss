@@ -18,7 +18,7 @@
   padding-bottom: 49px;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 46px;
+    padding-bottom: 54px;
   }
 
   @media (min-width: $desktop-width) {
@@ -36,9 +36,6 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-  }
-
-  @media (min-width: $desktop-width) {
     margin-bottom: 32px;
   }
 }
@@ -58,7 +55,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-gap: 45px 80px;
+    grid-gap: 45px 79px;
   }
 }
 
@@ -124,8 +121,8 @@
     margin: 0;
     counter-increment: card-counter;
     z-index: 1;
-    padding-top: 32px;
-    padding-bottom: 57px;
+    padding-top: 40px;
+    padding-bottom: 49px;
     padding-right: 70px;
 
     &::before {
@@ -141,7 +138,7 @@
       line-height: 280px;
       color: $basic-grey;
       z-index: -1;
-      top: -6px;
+      top: 0;
     }
 
     &--leaf::after {
@@ -166,13 +163,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 57px;
-    padding-top: 40px;
+    padding-bottom: 58px;
+    padding-top: 39px;
     padding-right: 0;
-
-    &::after {
-      left: 115px;
-      top: 0;
-    }
   }
 }

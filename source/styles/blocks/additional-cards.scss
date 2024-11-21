@@ -1,11 +1,12 @@
 .additional-cards {
-  padding: 14px 0 17px;
+  padding: 13px 0 17px;
   display: flex;
   flex-direction: column;
   border-top: 1 solid $special_grey;
 
   &:last-child {
     border-bottom: 1 solid $special_grey;
+    padding: 16px 0;
   }
 
   @media (min-width: $tablet-width) {
@@ -20,9 +21,9 @@
     border-left: 0;
     padding: 15px 0;
     display: grid;
-    grid-template-columns: repeat(3, 244px);
-    gap: 81px;
+    grid-template-columns: 290px auto 244px;
     align-items: center;
+    gap: 36px;
   }
 }
 
@@ -54,12 +55,14 @@
     margin-left: auto;
     grid-template-columns: 167px 92px;
     padding-top: 3px;
-    padding-right: 2px;
+    padding-right: 3px;
   }
 
   @media (min-width: $desktop-width) {
+    grid-template-columns: 241px 42px;
+    padding-top: 7px;
+    gap: 3px;
     margin: 0;
-    grid-template-columns: 218px 92px;
   }
 }
 
@@ -85,6 +88,10 @@
 
 .additional-cards__value {
   margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
 }
 
 .additional-cards__button {

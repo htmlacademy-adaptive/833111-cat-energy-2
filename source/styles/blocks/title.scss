@@ -22,7 +22,7 @@
     height: 2px;
     background-color: $basic-green;
     position: absolute;
-    top: 45%;
+    top: 37%;
     box-shadow: 100vw 0 0 $basic-green;
     z-index: -1;
     width: 100vw;
@@ -46,6 +46,10 @@
     &::after {
       width: calc(100% + 80px);
       left: -40;
+    }
+
+    &::before {
+      top: 46%;
     }
   }
 }

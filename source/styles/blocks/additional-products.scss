@@ -1,5 +1,5 @@
 .additional-products__title {
-  margin: 0 0 35px;
+  margin: 0 0 34px;
 
   @media (min-width: $tablet-width) {
     margin: 0 0 80px;
@@ -10,13 +10,13 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: auto 245px;
-    gap: 82px;
+    gap: 81px;
   }
 }
 
 .additional-products__list {
   list-style: none;
-  margin: 0 0 35px;
+  margin: 0 0 38px;
   padding: 0;
   display: grid;
 
@@ -26,6 +26,7 @@
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    align-content: start;
   }
 }
 
@@ -49,7 +50,7 @@
     background-image: url("../../icons/icon_gift.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    margin: 0 0 47px;
+    margin: 0 0 46px;
     position: relative;
     z-index: 1;
   }
@@ -69,7 +70,7 @@
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     flex-direction: row;
-    padding: 57px 125px 60px 78px;
+    padding: 57px 126px 60px 78px;
     background-image: url("../../images/promo-background_tablet@2x.jpg");
 
     &::before {
@@ -80,7 +81,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 56px 42px 43px;
+    padding: 57px 42px 43px;
     background-size: cover;
     background-image: url("../../images/promo-background_desktop@2x.jpg");
   }
