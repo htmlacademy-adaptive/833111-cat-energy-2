@@ -52,8 +52,9 @@
       background-position: center;
       display: inline-block;
       right: 63px;
-      top: 92px;
+      top: calc(50% + 6px);
       flex-shrink: 0;
+      transform: translateY(-50%);
     }
 
     &::after {
@@ -69,8 +70,9 @@
       position: absolute;
       width: 140px;
       height: 194px;
-      top: 81px;
+      top: calc(50% - 8px);
       right: 93px;
+      transform: translateY(-50%);
     }
 
     &--pro::after {
@@ -79,7 +81,8 @@
       width: 268px;
       height: 112px;
       right: 29px;
-      top: 135px;
+      top: calc(50% + 5px);
+      transform: translateY(-50%);
     }
   }
 
