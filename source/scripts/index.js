@@ -11,4 +11,3 @@ navToggle.addEventListener('click', () => {
   navToggle.classList.toggle('main-header__toggle--open');
   navList.classList.toggle('main-header__nav-list--open');
 });
-

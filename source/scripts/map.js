@@ -41,4 +41,3 @@ function init() {
 
   window.addEventListener('resize', updatePlacemarkSize);
 }
-
