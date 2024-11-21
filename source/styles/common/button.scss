@@ -1,5 +1,5 @@
 .button {
-  font-family: $primary-font;
+  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
   color: $basic-white;
@@ -11,11 +11,29 @@
   display: inline-block;
   cursor: pointer;
 
-  &:hover {
+  &:not(:disabled):hover {
     background-color: #5eaa2f;
   }
 
-  &:active {
+  &:not(:disabled):active {
     color: rgba($basic-white, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    background-color: $special_grey;
+  }
+
+  &--show_all:not(:disabled):hover {
+    background-color: #ebebeb;
+  }
+
+  &--show_all:not(:disabled):active {
+    background-color: #ebebeb;
+  }
+
+  &--show_all:disabled {
+    opacity: 0.5;
+    background-color: $special_grey;
   }
 }

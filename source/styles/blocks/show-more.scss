@@ -4,6 +4,7 @@
   gap: 0;
   padding-top: 25px;
   padding-bottom: 25px;
+  background-image: none;
 
   @media (min-width: $tablet-width) {
     padding-top: 48px;
@@ -14,7 +15,7 @@
 }
 
 .show-more__plus {
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   position: relative;
   width: 30px;
   height: 30px;
@@ -23,6 +24,10 @@
     width: 60px;
     height: 60px;
     margin-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 38px;
   }
 
   &::before,
@@ -65,6 +70,10 @@
     width: 170px;
     margin-bottom: 23px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 27px;
+  }
 }
 
 .show-more__description {
@@ -84,7 +93,7 @@
 }
 
 .show-more__button {
-  padding: 10px 0;
+  padding: 10px;
   width: 100%;
   background-color: $basic-grey;
   color: $special_dark-grey;

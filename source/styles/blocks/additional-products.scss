@@ -1,78 +1,77 @@
 .additional-products__title {
-  font-size: 24px;
-  font-weight: 400;
-  margin: 0 0 35px;
-  position: relative;
-
-  &::after,
-  &::before {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: $basic-green;
-    position: absolute;
-    top: 39%;
-  }
-
-  @media (max-width: $tablet-width) {
-    &::after {
-      width: 34px;
-      right: -20px;
-    }
-  }
+  margin: 0 0 34px;
 
   @media (min-width: $tablet-width) {
-    font-size: 32px;
-    line-height: 32px;
-    margin: 0 0 80px 40px;
+    margin: 0 0 80px;
+  }
+}
 
-    &::after {
-      width: 357px;
-      right: -30px;
-    }
-
-    &::before {
-      width: 30px;
-      left: -70px;
-    }
+.additional-products__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto 245px;
+    gap: 81px;
   }
 }
 
 .additional-products__list {
   list-style: none;
-  margin: 0 0 35px;
+  margin: 0 0 38px;
   padding: 0;
   display: grid;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 70px;
   }
-}
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    align-content: start;
+  }
+}
 
 .additional-products__promo {
   font-family: $secondary-font;
-  background-color: $basic-green;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 58px 51px 44px 50px;
-
+  background-image: url("../../images/promo-background_mobile@2x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
 
   &::before {
     content: "";
     display: inline-block;
-    width: 78px;
-    height: 80px;
+    width: 80px;
+    height: 82px;
     background-image: url("../../icons/icon_gift.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    margin: 0 0 48px;
+    margin: 0 0 46px;
+    position: relative;
+    z-index: 1;
   }
 
-  @media (min-width: $tablet-width) {
+  &::after {
+    content: "";
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 0;
+    background-color: #68b738;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     flex-direction: row;
-    padding: 57px 125px 60px 78px;
+    padding: 57px 126px 60px 78px;
+    background-image: url("../../images/promo-background_tablet@2x.jpg");
 
     &::before {
       width: 80px;
@@ -80,18 +79,24 @@
       margin: auto 0;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 57px 42px 43px;
+    background-size: cover;
+    background-image: url("../../images/promo-background_desktop@2x.jpg");
+  }
 }
 
 .additional-products__promo-description {
   font-family: $secondary-font;
   line-height: 20px;
   color: $basic-white;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
+  z-index: 1;
 
-  @media (min-width: $tablet-width) {
-    margin-left: auto;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     text-align: left;
-    margin-top: 5px;
+    margin: 5px 0 0 auto;
   }
 }

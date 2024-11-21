@@ -7,7 +7,8 @@
 
 /* BLOCKS */
 @import "./blocks/container.scss";
-@import "./blocks/header.scss";
+@import "./blocks/main-container.scss";
+@import "./blocks/main-header.scss";
 @import "./blocks/advertising.scss";
 @import "./blocks/diet-plans.scss";
 @import "./blocks/advantages.scss";
@@ -16,7 +17,9 @@
 @import "./blocks/show-more.scss";
 @import "./blocks/additional-products.scss";
 @import "./blocks/additional-cards.scss";
+@import "./blocks/title.scss";
 @import "./blocks/newsletter.scss";
 @import "./blocks/page-footer.scss";
 @import "./blocks/contacts.scss";
-@import "./blocks/social.scss"
+@import "./blocks/social.scss";
+@import "./blocks/slider.scss"
