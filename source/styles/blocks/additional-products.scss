@@ -1,0 +1,98 @@
+.additional-products__title {
+  margin: 0 0 34px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 80px;
+  }
+}
+
+.additional-products__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: auto 245px;
+    gap: 81px;
+  }
+}
+
+.additional-products__list {
+  list-style: none;
+  margin: 0 0 38px;
+  padding: 0;
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    align-content: start;
+  }
+}
+
+.additional-products__promo {
+  font-family: $secondary-font;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 58px 51px 44px 50px;
+  background-image: url("../../images/promo-background_mobile@2x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 82px;
+    background-image: url("../../icons/icon_gift.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 0 46px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    opacity: 0.85;
+    pointer-events: none;
+    background-color: #68b738;
+    position: absolute;
+    inset: 0;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    flex-direction: row;
+    padding: 57px 126px 60px 78px;
+    background-image: url("../../images/promo-background_tablet@2x.jpg");
+
+    &::before {
+      width: 80px;
+      height: 82px;
+      margin: auto 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 57px 42px 43px;
+    background-size: cover;
+    background-image: url("../../images/promo-background_desktop@2x.jpg");
+  }
+}
+
+.additional-products__promo-description {
+  font-family: $secondary-font;
+  line-height: 20px;
+  color: $basic-white;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    text-align: left;
+    margin: 5px 0 0 auto;
+  }
+}
