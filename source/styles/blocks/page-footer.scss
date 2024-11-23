@@ -10,18 +10,30 @@
   height: 362px;
   z-index: 1;
   background-color: $basic-grey;
-  background-image: url("../../images/map_mobile@2x.png");
+  background-image: url("../../images/map_mobile@1x.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/map_mobile@2x.webp");
+  }
+
   @media (min-width: $tablet-width) {
     height: 400px;
-    background-image: url("../../images/map_tablet@2x.png");
+    background-image: url("../../images/map_tablet@1x.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/map_tablet@2x.webp");
+    }
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../../images/map_desktop@2x.png");
+    background-image: url("../../images/map_desktop@1x.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/map_desktop@2x.webp");
+    }
   }
 }
 
@@ -91,11 +103,11 @@
 }
 
 .page-footer__partner-link {
+  text-decoration: none;
   font-family: $secondary-font;
   line-height: 34px;
   display: flex;
   color: $special_dark-grey;
-  text-decoration: none;
   gap: 23px;
   margin-left: auto;
 

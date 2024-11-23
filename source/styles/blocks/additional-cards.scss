@@ -38,6 +38,7 @@
     font-size: 20px;
     line-height: 20px;
     margin: 0 0 24px;
+    padding-right: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -87,10 +88,6 @@
 
 .additional-cards__value {
   margin-left: auto;
-
-  @media (min-width: $tablet-width) {
-    margin-left: 0;
-  }
 }
 
 .additional-cards__button {
