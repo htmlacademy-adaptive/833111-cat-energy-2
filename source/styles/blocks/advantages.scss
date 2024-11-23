@@ -46,7 +46,6 @@
   margin: 0;
   padding: 0;
 
-
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -65,7 +64,6 @@
   line-height: 18px;
   color: $special_dark-grey;
   display: flex;
-  align-items: center;
   gap: 20px;
   margin: 0 0 20px;
 
@@ -102,7 +100,6 @@
     background-image: url("../../icons/icon_clock.svg");
     background-size: 26px 31px;
   }
-
 
   @media (max-width: $tablet-width) {
     & br {

@@ -1,71 +1,52 @@
 .main-header {
-  &--with-background {
-    position: relative;
-
-    &::before,
-    &::after {
-      content: "";
-      z-index: -1;
-      width: 100%;
-      height: 302px;
-      position: absolute;
-      top: 65px;
-    }
-
-    &::after {
-      background-color: $basic-green;
-      opacity: 0.85;
-      pointer-events: none;
-    }
-
-    &::before {
-      background-image: url("../../images/index-background-mobile@2x.jpg");
-      background-color: #4e4d4d;
-      background-size: contain;
-      background-position: top center;
-      background-repeat: no-repeat;
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    &::before,
-    &::after {
-      content: none;
-    }
-  }
-
   @media (min-width: $desktop-width) {
     &--with-background {
+      position: relative;
+
+      &::before,
       &::after {
         content: "";
+        z-index: -1;
         width: 50%;
         height: 100%;
+        position: absolute;
         top: 0;
         right: 0;
       }
 
+      &::after {
+        content: "";
+        background-color: $basic-green;
+        opacity: 0.85;
+        pointer-events: none;
+      }
+
       &::before {
         content: "";
-        background-image: url("../../images/index-background-desktop@2x.jpg");
+        background-image: url("../../images/index-background-desktop@1x.webp");
         background-size: cover;
         background-position: top right;
-        width: 50%;
-        height: 100%;
-        top: 0;
-        right: 0;
+      }
+
+      @media (min-resolution: 2dppx) {
+        &::before {
+          background-image: url("../../images/index-background-desktop@2x.webp");
+        }
       }
     }
   }
 }
 
 .main-header__main-navigation {
-  display: flex;
-  align-items: flex-start;
   padding-top: 13px;
   padding-bottom: 15px;
   position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 
   @media (min-width: $tablet-width) {
+    flex-direction: row;
     padding-top: 25px;
     padding-bottom: 65px;
   }
@@ -100,7 +81,13 @@
 
 .main-header__navigation {
   margin-left: auto;
-  margin-right: 3px;
+
+  @media (max-width: $tablet-width) {
+    &--no-js {
+      width: 100%;
+      padding-top: 14px;
+    }
+  }
 
   @media (min-width: $desktop-width) {
     width: 478px;
@@ -131,7 +118,7 @@
 
   @media (max-width: 766px) {
     position: absolute;
-    top: 50%;
+    top: 32px;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -151,7 +138,7 @@
     border: 0;
     cursor: pointer;
     position: absolute;
-    transform: translate(-92%, 27%);
+    transform: translate(-100%, -130%);
     z-index: 10;
     display: block;
 
@@ -185,13 +172,13 @@
     }
 
     &--open::before {
-      left: 7px;
+      left: 4px;
       box-shadow: 0 0 0 $basic-black;
       transform: rotate(46deg);
     }
 
     &--open::after {
-      left: 7px;
+      left: 4px;
       transform: rotate(-47deg);
     }
 
@@ -229,6 +216,7 @@
 
   &--no-js {
     display: block;
+    position: static;
   }
 
   @media (min-width: $tablet-width) {
